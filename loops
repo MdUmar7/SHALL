@@ -1,0 +1,30 @@
+#schedualing
+#
+#if
+#for
+#do
+#while
+#until
+#case
+#select
+#break
+#continue
+#return
+#exit
+#function
+
+-f ==> to fine file exist or not
+tee ==> insert into file and present it with diplay containt
+sed ==> stream editor
+sed
+awk ==> pattern scanning and processing language   
+cut ==> remove sections from each line of files
+grep ==> search plain-text data sets for lines that match a regular expression
+find ==> search for files in a directory hierarchy
+xargs ==> build and execute command lines from standard input
+sort ==> sort lines of text files
+uniq ==> report or omit repeated lines
+diff ==> compare files line by line
+patch ==> apply a diff file to an original
+tr ==> translate or delete characters
+wc ==> word count

@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Read input
+read -p "Enter Student English Marks: " english
+read -p "Enter Student Hindi Marks: " hindi
+read -p "Enter Student Math Marks: " math
+read -p "Enter Student Science Marks: " science
+read -p "Enter Student History Marks: " history
+
+marks30=30
+dis=75
+noOfSubPass=0
+noOfdisMark=0
+
+check_marks() {
+    local marks=$1
+
+
+    if [ $marks -ge $marks30 ]; then
+        noOfSubPass=$((noOfSubPass+1))
+
+
+        [ $marks -ge $dis ] && noOfdisMark=$((noOfdisMark+1))
+    fi
+}
+
+check_marks $english
+check_marks $hindi
+check_marks $math
+check_marks $science
+check_marks $history
+
+if [ $noOfSubPass -eq 5 ] && [ $noOfdisMark -ge 3 ]; then
+    echo "🌟 Student passed with Distinction!"
+elif [ $noOfSubPass -ge 3 ] || [ $noOfdisMark -ge 1 ]; then
+    echo "✅ Student passed in $noOfSubPass subjects"
+else
+    echo "❌ Student failed (passed only $noOfSubPass subjects)"
+fi
